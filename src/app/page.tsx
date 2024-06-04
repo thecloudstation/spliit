@@ -7,26 +7,106 @@ import Link from 'next/link'
 
 export default function HomePage() {
   return (
-    <main>
-      <section className="py-16 md:py-24 lg:py-32">
-        <div className="container flex max-w-screen-md flex-col items-center gap-4 text-center">
-          <h1 className="!leading-none font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl landing-header py-2">
-            Share <strong>Expenses</strong> <br /> with <strong>Friends</strong>{' '}
-            & <strong>Family</strong>
+    <main className="min-h-screen bg-gray-50">
+      <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-r from-teal-500 to-cyan-500 text-white">
+        <div className="container flex flex-col items-center text-center max-w-screen-md mx-auto px-4">
+          <h1 className="text-4xl sm:text-4xl md:text-4xl lg:text-4xl font-bold leading-none mb-4">
+            Welcome to <strong>Spliit</strong> <br /> Deployed on <strong>Cloud-Station.io</strong>
           </h1>
-          <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-            Welcome to your new <strong>Spliit</strong> instance! <br />
-            Customize this page by editing <em>src/app/page.tsx</em>.
+          <p className="text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed mb-8">
+            Easily share expenses with friends and family. Deploy your own instance of Spliit with Cloud-Station.io and start managing your group expenses effortlessly.
           </p>
-          <div className="flex gap-2">
-            <Button asChild>
-              <Link href="/groups">Go to groups</Link>
+          <div className="flex flex-wrap gap-4 justify-center mb-8">
+            <Button asChild className="bg-cyan-600 text-white hover:bg-cyan-700">
+              <Link href="/groups">Go to Groups</Link>
             </Button>
-            <Button asChild variant="secondary">
+            <Button asChild variant="secondary" className="bg-transparent border-white hover:bg-white hover:text-cyan-600">
               <Link href="https://github.com/spliit-app/spliit">
                 <Github className="w-4 h-4 mr-2" />
-                GitHub
+                Spliit
               </Link>
+            </Button>
+            <Button asChild variant="secondary" className="bg-transparent border-white hover:bg-white hover:text-cyan-600">
+              <Link href="https://github.com/thecloudstation/spliit">
+                <Github className="w-4 h-4 mr-2" />
+                CloudStation
+              </Link>
+            </Button>
+          </div>
+          <div className="bg-white text-cyan-600 p-6 rounded-lg shadow-md max-w-2xl mx-auto">
+            <h2 className="text-2xl font-bold mb-4">Deploy on Cloud-Station.io</h2>
+            <p className="leading-relaxed mb-4">
+              To deploy Spliit on Cloud-Station.io, follow these steps:
+            </p>
+            <ol className="list-decimal list-inside text-left space-y-2">
+              <li>Navigate to the Cloud-Station <Link href="https://www.cloud-station.io/dashboard/project" className="text-cyan-600 underline">Dashboard</Link>.</li>
+              <li>Create a new project.</li>
+              <li>Click on <strong>Add New</strong> and select <strong>Template</strong>.</li>
+              <li>Choose the template <strong>Spliit</strong>.</li>
+              <li>Choose a subdomain for your app, e.g., <code className="bg-gray-200 p-1 rounded">myspliit</code>, and click <strong>Deploy</strong>.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section className="py-16 bg-white">
+        <div className="container max-w-screen-lg mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-8">Key Features</h2>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="p-4 bg-gray-100 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-2">Create and Manage Groups</h3>
+              <p className="leading-relaxed">Easily create groups and share them with your friends and family.</p>
+            </div>
+            <div className="p-4 bg-gray-100 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-2">Track Expenses</h3>
+              <p className="leading-relaxed">Keep track of expenses with detailed descriptions and categories.</p>
+            </div>
+            <div className="p-4 bg-gray-100 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-2">View Balances and Reimbursements</h3>
+              <p className="leading-relaxed">Easily view group balances and manage reimbursements.</p>
+            </div>
+            <div className="p-4 bg-gray-100 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-2">Progressive Web App</h3>
+              <p className="leading-relaxed">Use Spliit as a mobile app for a seamless experience.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-16 bg-gray-50">
+        <div className="container max-w-screen-lg mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-8">Why Choose Cloud-Station.io?</h2>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="p-4 bg-white rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-2">High Performance</h3>
+              <p className="leading-relaxed">Experience fast and reliable performance for your applications.</p>
+            </div>
+            <div className="p-4 bg-white rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-2">Scalable Infrastructure</h3>
+              <p className="leading-relaxed">Scale your applications effortlessly with our robust infrastructure.</p>
+            </div>
+            <div className="p-4 bg-white rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-2">Your Data, Your Control</h3>
+              <p className="leading-relaxed">We prioritize your data privacy and security. Your data remains yours and under your control.</p>
+            </div>
+            <div className="p-4 bg-white rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-2">Default Region: Europe</h3>
+              <p className="leading-relaxed">Deployments are in Europe by default. Additional regions will be available soon, giving you more choices.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-16 bg-white">
+        <div className="container max-w-screen-lg mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-8">Support and Resources</h2>
+          <p className="leading-relaxed mb-8">Need help? Check out our support resources:</p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Button asChild className="bg-cyan-600 text-white">
+              <Link href="https://documentation.cloud-station.io/s/ce6e8846-8aec-4337-a850-5188b6dc6d6e">Documentation</Link>
+            </Button>
+            <Button asChild className="bg-cyan-600 text-white">
+              <Link href="https://join.slack.com/t/cloudstationio/shared_invite/zt-20kougo40-Kd1196QzZ7bwUA0oPfZORA">Support</Link>
+            </Button>
+            <Button asChild className="bg-cyan-600 text-white">
+              <Link href="https://blog.cloud-station.io/">Blog</Link>
             </Button>
           </div>
         </div>
