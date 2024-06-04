@@ -79,7 +79,7 @@ export function ActivityList({
           <div key={dateGroup}>
             <div
               className={
-                'text-muted-foreground text-xs py-1 font-semibold sticky top-16 bg-white dark:bg-[#1b1917]'
+                'text-muted-foreground text-xs py-1 font-semibold sticky top-16 bg-background dark:bg-[#1b1917]'
               }
             >
               {dateGroup}
