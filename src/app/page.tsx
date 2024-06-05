@@ -7,11 +7,7 @@ import Link from 'next/link'
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
-    <main className="min-h-screen bg-gray-50 dark:bg-gray-950">
-=======
     <main className="min-h-screen ">
->>>>>>> 927bb41 (change colors)
       <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-r from-teal-500 to-cyan-500 text-white">
         <div className="container flex flex-col items-center text-center max-w-screen-md mx-auto px-4">
           <h1 className="text-4xl sm:text-4xl md:text-4xl lg:text-4xl font-bold leading-none mb-4">
@@ -33,11 +29,7 @@ export default function HomePage() {
             <Button
               asChild
               variant="secondary"
-<<<<<<< HEAD
-              className="bg-transparent border-white hover:bg-background hover:text-cyan-600"
-=======
               className="bg-transparent border-white hover:bg-white hover:text-cyan-600"
->>>>>>> 927bb41 (change colors)
             >
               <Link href="https://github.com/spliit-app/spliit">
                 <Github className="w-4 h-4 mr-2" />
@@ -47,11 +39,7 @@ export default function HomePage() {
             <Button
               asChild
               variant="secondary"
-<<<<<<< HEAD
-              className="bg-transparent border-white hover:bg-background hover:text-cyan-600"
-=======
               className="bg-transparent border-white hover:bg-white hover:text-cyan-600"
->>>>>>> 927bb41 (change colors)
             >
               <Link href="https://github.com/thecloudstation/spliit">
                 <Github className="w-4 h-4 mr-2" />
@@ -59,11 +47,7 @@ export default function HomePage() {
               </Link>
             </Button>
           </div>
-<<<<<<< HEAD
-          <div className="bg-background text-cyan-600 p-6 rounded-lg shadow-md max-w-2xl mx-auto">
-=======
           <div className="bg-white text-cyan-600 p-6 rounded-lg shadow-md max-w-2xl mx-auto">
->>>>>>> 927bb41 (change colors)
             <h2 className="text-2xl font-bold mb-4">
               Deploy on Cloud-Station.io
             </h2>
@@ -98,19 +82,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <section className="py-16 bg-background">
-        <div className="container max-w-screen-lg mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-8">Key Features</h2>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="p-4 bg-gray-100 dark:bg-gray-900 rounded-lg shadow-md">
-=======
       <section className="py-16 ">
         <div className="container max-w-screen-lg mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-8">Key Features</h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div className="p-4 rounded-lg dark:border bg-card shadow-md">
->>>>>>> 927bb41 (change colors)
               <h3 className="text-xl font-semibold mb-2">
                 Create and Manage Groups
               </h3>
@@ -119,22 +95,14 @@ export default function HomePage() {
                 family.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="p-4 bg-gray-100 dark:bg-gray-900 rounded-lg shadow-md">
-=======
             <div className="p-4 rounded-lg dark:border bg-card shadow-md">
->>>>>>> 927bb41 (change colors)
               <h3 className="text-xl font-semibold mb-2">Track Expenses</h3>
               <p className="leading-relaxed">
                 Keep track of expenses with detailed descriptions and
                 categories.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="p-4 bg-gray-100 dark:bg-gray-900 rounded-lg shadow-md">
-=======
             <div className="p-4 rounded-lg dark:border bg-card shadow-md">
->>>>>>> 927bb41 (change colors)
               <h3 className="text-xl font-semibold mb-2">
                 View Balances and Reimbursements
               </h3>
@@ -142,11 +110,7 @@ export default function HomePage() {
                 Easily view group balances and manage reimbursements.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="p-4 bg-gray-100 dark:bg-gray-900 rounded-lg shadow-md">
-=======
             <div className="p-4 rounded-lg dark:border bg-card shadow-md">
->>>>>>> 927bb41 (change colors)
               <h3 className="text-xl font-semibold mb-2">
                 Progressive Web App
               </h3>
@@ -157,11 +121,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <section className="py-16 bg-gray-50 dark:bg-gray-950">
-=======
       <section className="py-16 bg-card">
->>>>>>> 927bb41 (change colors)
         <div className="container max-w-screen-lg mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-8">
             Why Choose Cloud-Station.io?
@@ -203,11 +163,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <section className="py-16 bg-background">
-=======
       <section className="py-16">
->>>>>>> 927bb41 (change colors)
         <div className="container max-w-screen-lg mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-8">Support and Resources</h2>
           <p className="leading-relaxed mb-8">
