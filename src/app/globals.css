@@ -5,47 +5,74 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 163 94% 24%;
-    --primary-foreground: 0 100% 100%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 142.1 76.2% 36.3%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: 210 20% 97%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
     --radius: 0.5rem;
+
+    --prime: 192, 57%, 49%;
+    --second: 180, 99%, 60%;
   }
 
   .dark {
-    --background: 20 14.3% 4.1%;
-    --foreground: 0 0% 95%;
-    --card: 24 9.8% 10%;
-    --card-foreground: 0 0% 95%;
-    --popover: 0 0% 9%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 161 90% 45%;
-    --primary-foreground: 144.9 80.4% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 12 6.5% 15.1%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 85.7% 97.3%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 142.4 71.8% 29.2%;
+    --background: 222, 47%, 11%;
+    --foreground: 213 31% 91%;
+
+    --muted: 222, 38.46%, 15.29%;
+    --muted-foreground: 0, 0%, 100%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224.21, 29.23%, 12.75%;
+    --popover-foreground: 0, 0%, 100%;
+
+    --border: 220.71, 22.58%, 24.31%;
+    --input: 220.71, 22.58%, 24.31%;
+
+    --card: 222, 38%, 16.9%  ;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0, 82.93%, 70.78%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+
+    --prime: 192, 57%, 49%;
+    --second: 180, 99%, 60%;
   }
 }
 
@@ -55,11 +82,64 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
   }
 }
 
-.landing-header {
-  @apply bg-gradient-to-br from-emerald-800 to-emerald-600 dark:from-emerald-300 dark:to-emerald-600 bg-clip-text;
+.link {
+  @apply flex h-9 items-center px-3 text-lg font-medium text-muted-foreground transition-colors hover:text-foreground sm:text-sm;
+}
+
+.mobile-link {
+  @apply flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline;
+}
+
+.active-link {
+  @apply inline-flex h-9 items-center  justify-center rounded-md bg-primary/10 px-3 text-sm font-medium text-primary/80;
+}
+
+.mobile-active-link {
+  @apply inline-flex  items-center justify-center p-2   text-sm font-medium text-primary/80 underline;
+}
+
+:root {
+  --scrollbar-thumb-color: #dcdce0;
+}
+
+/* Dark mode scrollbar */
+:root.dark-mode {
+  --scrollbar-thumb-color: #3c3c3d;
+}
+
+/* Light Mode */
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.hide-scrollbar ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .landing-header strong {

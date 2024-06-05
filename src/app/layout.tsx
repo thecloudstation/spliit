@@ -67,7 +67,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <ApplePwaSplash icon="/logo-with-text.png" color="#027756" />
-      <body className="pt-16 min-h-[100dvh] flex flex-col items-stretch bg-slate-50 bg-opacity-30 dark:bg-background">
+      <body className="pt-16 min-h-[100dvh] flex flex-col items-stretch bg-background ">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -77,7 +77,11 @@ export default function RootLayout({
           <Suspense>
             <ProgressBar />
           </Suspense>
+<<<<<<< HEAD
           <header className="fixed top-0 left-0 right-0 h-16 flex justify-between bg-background dark:bg-gray-950 bg-opacity-50 dark:bg-opacity-50 p-2 border-b backdrop-blur-sm z-50">
+=======
+          <header className="fixed top-0 left-0 right-0 h-16 flex justify-between  p-2 border-b backdrop-blur-sm z-50">
+>>>>>>> 927bb41 (change colors)
             <Link
               className="flex items-center gap-2 hover:scale-105 transition-transform"
               href="/"
@@ -112,7 +116,7 @@ export default function RootLayout({
 
           <div className="flex-1 flex flex-col">{children}</div>
 
-          <footer className="sm:p-8 md:p-16 sm:mt-16 sm:text-sm md:text-base md:mt-32 bg-slate-50 dark:bg-card border-t p-6 mt-8 flex flex-col sm:flex-row sm:justify-between gap-4 text-xs [&_a]:underline">
+          <footer className="sm:p-8 md:p-16 sm:mt-16 sm:text-sm md:text-base md:mt-32   border-t p-6 mt-8 flex flex-col sm:flex-row sm:justify-between gap-4 text-xs [&_a]:underline">
             <div className="flex flex-col space-y-2">
               <div className="sm:text-lg font-semibold text-base flex space-x-2 items-center">
                 <Link className="flex items-center gap-2" href="/">
