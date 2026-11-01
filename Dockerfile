@@ -45,4 +45,5 @@ COPY ./scripts ./scripts
 COPY --from=base /usr/app/prisma ./prisma
 COPY --from=base /usr/app/.next ./.next
 
-ENTRYPOINT ["/bin/sh", "/usr/app/scripts/container-entrypoint.sh"]
+COPY --from=caddy:2.11.7-alpine /usr/bin/caddy /usr/local/bin/caddy
+ENTRYPOINT ["/bin/sh", "/usr/app/scripts/gated-entrypoint.sh"]
